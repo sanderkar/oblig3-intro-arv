@@ -22,7 +22,7 @@ public class WrapTextCommand implements TextCommand {
   @Override
     public String execute(String text) {
       if(text.isBlank()){
-        return """;
+        return "";
       }
         return "" + opening + text + end;
     }
