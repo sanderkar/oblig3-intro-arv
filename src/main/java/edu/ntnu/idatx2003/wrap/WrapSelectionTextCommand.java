@@ -17,12 +17,7 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
 
   @Override
     public String execute(String text) {
-      int firstPartLength = text.indexOf(opening);
-      int lastPartLength = text.length() - text.indexOf(opening) - selection.length();
-      String firstPart = text.substring(0, firstPartLength);
-        String lastPart = text.substring(text.length() - lastPartLength);
-
-      return "" + firstPart + selection + lastPart;
+      return text.replaceAll(")")
 
     }
 }
