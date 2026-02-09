@@ -8,6 +8,9 @@ public class WrapLinesTextCommand extends WrapTextCommand {
 
   @Override
     public String execute(String text) {
+      if(text.isBlank()){
+        return "";
+      }
       return "" + opening + text.replaceAll("\n", end + "\n" + opening) + end;
     }
 }
