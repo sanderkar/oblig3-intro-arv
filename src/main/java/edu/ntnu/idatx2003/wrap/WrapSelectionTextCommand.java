@@ -22,9 +22,7 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
       String firstPart = text.substring(0, firstPartLength);
         String lastPart = text.substring(text.length() - lastPartLength);
 
-      String newtext = "" + firstPart + selection + lastPart;
-
-
+      return "" + firstPart + selection + lastPart;
 
     }
 }
