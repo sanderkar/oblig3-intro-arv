@@ -11,8 +11,7 @@ public class WrapLinesTextCommand extends WrapTextCommand {
     if (text == null || text.isBlank()) {
       return text;
     }
-    String removedLinesText = text.replace("\n\n", "");
-    return "" + opening + removedLinesText.replace("\n", end + "\n" + opening) + end;
+    return "" + opening + text.replace("\n", end + "\n" + opening) + end;
   }
 
 }
