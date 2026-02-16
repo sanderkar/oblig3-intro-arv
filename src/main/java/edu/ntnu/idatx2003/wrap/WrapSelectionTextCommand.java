@@ -10,7 +10,6 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
 
   }
 
-
   public String getSelection() {
     return selection;
   }

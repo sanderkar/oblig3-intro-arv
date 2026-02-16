@@ -8,9 +8,11 @@ public class WrapLinesTextCommand extends WrapTextCommand {
 
   @Override
     public String execute(String text) {
-      if(text.isEmpty()){
-        return "";
-      }
-      return "" + opening + text.replace("\n", end + "\n" + opening) + end;
+    if (text == null || text.isBlank()) {
+      return text;
     }
+    String removedLinesText = text.replace("\n\n", "");
+    return "" + opening + removedLinesText.replace("\n", end + "\n" + opening) + end;
+  }
+
 }
