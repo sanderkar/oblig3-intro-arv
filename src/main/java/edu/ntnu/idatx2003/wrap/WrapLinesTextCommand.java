@@ -11,7 +11,15 @@ public class WrapLinesTextCommand extends WrapTextCommand {
     if (text == null || text.isBlank()) {
       return text;
     }
-    return "" + opening + text.replace("\n", end + "\n" + opening) + end;
+
+    StringBuilder sb = new StringBuilder();
+    String[] splitText = text.split("\n");
+
+    for (String s : splitText) {
+      sb.append(opening + s + end);
+    }
+    return sb.toString();
+    //return "" + opening + text.replace("\n", end + "\n" + opening) + end;
   }
 
 }
