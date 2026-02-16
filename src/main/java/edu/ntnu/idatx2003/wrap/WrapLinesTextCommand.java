@@ -16,7 +16,11 @@ public class WrapLinesTextCommand extends WrapTextCommand {
     String[] splitText = text.split("\n");
 
     for (String s : splitText) {
-      sb.append(opening + s + end);
+      if (s.isEmpty() || s.isBlank()) {
+        sb.append("");
+      } else {
+        sb.append(opening + s + end);
+      }
     }
     return sb.toString();
     //return "" + opening + text.replace("\n", end + "\n" + opening) + end;
