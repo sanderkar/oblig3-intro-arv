@@ -17,9 +17,9 @@ public class WrapLinesTextCommand extends WrapTextCommand {
 
     for (String s : splitText) {
       if (s.isEmpty() || s.isBlank()) {
-        sb.append(" ");
+        sb.append("");
       } else {
-        sb.append(opening + s + end);
+        sb.append(opening + s + end + "\n");
       }
     }
     return sb.toString();
