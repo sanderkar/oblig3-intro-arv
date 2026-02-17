@@ -7,7 +7,7 @@ public class WrapLinesTextCommand extends WrapTextCommand {
 
 
   @Override
-    public String execute(String text) {
+  public String execute(String text) {
     if (text == null || text.isBlank()) {
       return text;
     }
@@ -15,15 +15,20 @@ public class WrapLinesTextCommand extends WrapTextCommand {
     StringBuilder sb = new StringBuilder();
     String[] splitText = text.split("\n");
 
-    for (String s : splitText) {
-      if (s.isEmpty() || s.isBlank()) {
-        sb.append("");
-      } else {
-        sb.append(opening + s + end + "\n");
-      }
+    for (int i = 0; i < splitText.length; i++) {
+      String s = splitText[i];
+
+      if (!s.isBlank()) {
+        sb.append(opening).append(s).append(end);
+        }
+
+      if (i < splitText.length - 1) {
+        sb.append("\n");
+        }
     }
+
     return sb.toString();
-    //return "" + opening + text.replace("\n", end + "\n" + opening) + end;
   }
+
 
 }
