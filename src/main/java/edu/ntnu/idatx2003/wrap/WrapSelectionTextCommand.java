@@ -4,7 +4,7 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
 
   String selection;
 
-  public WrapSelectionTextCommand(String selection, String opening, String end) {
+  public WrapSelectionTextCommand(String opening, String end, String selection) {
     super(opening, end);
     this.selection = selection;
 
@@ -17,7 +17,7 @@ public class WrapSelectionTextCommand extends WrapTextCommand {
   @Override
     public String execute(String text) {
     String newText = text.replace(selection, opening + selection + end);
-      return newText;
+    return newText;
 
     }
 }
