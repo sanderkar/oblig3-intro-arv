@@ -1,6 +1,6 @@
 package edu.ntnu.idatx2003.capitalize;
 
-public class CapitalizeSelectionTextCommand extends CapitalizeTextCommand {
+public class CapitalizeSelectionTextCommand extends CapitalizeWordsTextCommand {
 
   private String selection;
 

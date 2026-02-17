@@ -1,6 +1,8 @@
 package edu.ntnu.idatx2003.capitalize;
 
-public class CapitalizeWordsCommand extends CapitalizeTextCommand {
+import edu.ntnu.idatx2003.TextCommand;
+
+public class CapitalizeWordsCommand implements TextCommand {
 
   //override ex
   @Override
